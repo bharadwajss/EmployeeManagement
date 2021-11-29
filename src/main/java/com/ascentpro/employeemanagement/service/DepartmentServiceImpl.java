@@ -1,6 +1,7 @@
 package com.ascentpro.employeemanagement.service;
 
 import java.util.List;
+import java.util.Objects;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,10 +32,20 @@ public class DepartmentServiceImpl implements DepartmentService {
 	}
 
 	@Override
-	public String deleteDepartmentById(Long departmentId) {
-		// TODO Auto-generated method stub
+	public void deleteDepartmentById(Long departmentId) {
+		departmentRepository.deleteById(departmentId);
+	}
+
+	@Override
+	public Department updateDepartment(Long departmentId, Department department) {
+		// Department departmentDB= departmentRepository.getById(departmentId).get();
+
 		return null;
 	}
-	
+
+	@Override
+	public Department findBydepartmentName(String departmentName) {
+		return departmentRepository.findByDepartmentName(departmentName);
+	}
 
 }
