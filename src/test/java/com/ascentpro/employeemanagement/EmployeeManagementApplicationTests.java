@@ -8,6 +8,8 @@ class EmployeeManagementApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("hi this new test case");
+		System.out.println("this is updated by pravin");
 	}
 
 }
