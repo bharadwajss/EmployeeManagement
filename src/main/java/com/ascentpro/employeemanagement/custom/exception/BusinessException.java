@@ -19,5 +19,9 @@ public class BusinessException extends RuntimeException {
 	private String errorCode;
 	private String errorMessage;
 	
+	public String messageNotFoundException()
+	{
+		return null;
+	}
 
 }

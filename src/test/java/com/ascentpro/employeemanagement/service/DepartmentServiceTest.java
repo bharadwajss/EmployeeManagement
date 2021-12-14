@@ -1,6 +1,7 @@
 package com.ascentpro.employeemanagement.service;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -36,6 +37,14 @@ class DepartmentServiceTest {
 		Department found = departmentService.findBydepartmentName(departmentName);
 		assertEquals(departmentName, found.getDepartmentName());
 
+	}
+	
+	@Test
+	public void whenDepartmentNameIsNull()
+	{
+		//String departmentName=null;
+		Department found= departmentService.findBydepartmentName(null);
+		assertNotNull(found);
 	}
 
 	/*

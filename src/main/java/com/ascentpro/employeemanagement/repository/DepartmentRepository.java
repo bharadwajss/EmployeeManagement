@@ -9,8 +9,7 @@ import com.ascentpro.employeemanagement.model.Department;
 public interface DepartmentRepository extends  JpaRepository<Department, Long> {
 	
 	Department findByDepartmentName(String departmentName);
-	
-	 
-	Department findByDepartmentNameIgnoreEqualCase(String name);
+		 
+	//Department findByDepartmentNameIgnoreEqualCase(String name);
 
 }
